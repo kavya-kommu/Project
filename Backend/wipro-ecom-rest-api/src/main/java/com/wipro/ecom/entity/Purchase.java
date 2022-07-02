@@ -11,18 +11,16 @@ public class Purchase {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Integer id;
 	private String Purchase_Date;
-	private String gstin;
 	private String Dealer_id;
 	private String Medicine_id;
 	private String Quantity;
 	
 	public Purchase() {}
 	
-	  public Purchase(Integer id,String Purchase_Date ,String gstin ,String Dealer_id,String Medicine_id,String Quantity) {
+	  public Purchase(Integer id,String Purchase_Date ,String Dealer_id,String Medicine_id,String Quantity) {
 		  super();
 		  this.id=id;
 	      this.Purchase_Date=Purchase_Date;
-	      this.gstin=gstin;
 	      this.Dealer_id=Dealer_id;
 	      this.Medicine_id=Medicine_id;
 	      this.Quantity=Quantity;
@@ -39,13 +37,6 @@ public class Purchase {
 	  }
 	  public void setPurchase_Date(String Purchase_Date) {
 		  this.Purchase_Date=Purchase_Date;
-	  }
-	  
-	  public String getGstin() {
-		  return gstin;
-	  }
-	  public void setGstin(String gstin) {
-		  this.gstin=gstin;
 	  }
 	  
 	  public String getDealer_id() {
@@ -71,7 +62,7 @@ public class Purchase {
 	  
 	  @Override
 	  public String toString() {
-		  return "Purchase [id=" + id + ", Purchase_Date=" + Purchase_Date + ", gstin="+ gstin + ", Dealer_id=" + Dealer_id
+		  return "Purchase [id=" + id + ", Purchase_Date=" + Purchase_Date + ", Dealer_id=" + Dealer_id
 				  + ", Medicine_id=" + Medicine_id +", Quantity=" + Quantity +"]";
 				  
 	  }
